@@ -9,16 +9,16 @@
   <meta name="robots" content="index, follow">
 
   <!-- SEO Canónico y hreflang -->
-  <link rel="canonical" href="https://cv.arturonavax.workers.dev/">
-  <link rel="alternate" hreflang="en" href="https://cv.arturonavax.workers.dev/ArturoNava-CV-en.html">
-  <link rel="alternate" hreflang="es" href="https://cv.arturonavax.workers.dev/ArturoNava-CV-es.html">
-  <link rel="alternate" hreflang="x-default" href="https://cv.arturonavax.workers.dev/">
+  <link rel="canonical" href="https://cv.arturonavax.com/">
+  <link rel="alternate" hreflang="en" href="https://cv.arturonavax.com/ArturoNava-CV-en.html">
+  <link rel="alternate" hreflang="es" href="https://cv.arturonavax.com/ArturoNava-CV-es.html">
+  <link rel="alternate" hreflang="x-default" href="https://cv.arturonavax.com/">
 
   <!-- OpenGraph / LinkedIn / Facebook -->
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Arturo Nava | Senior Software Engineer CV">
   <meta property="og:description" content="Senior Software Engineer with 8+ years experience in Distributed Systems, High-Concurrency (Golang, Rust), and Enterprise Security.">
-  <meta property="og:url" content="https://cv.arturonavax.workers.dev/">
+  <meta property="og:url" content="https://cv.arturonavax.com/">
   <meta property="og:locale" content="en_US">
   <meta property="profile:first_name" content="Arturo">
   <meta property="profile:last_name" content="Nava">
@@ -35,11 +35,11 @@
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://cv.arturonavax.workers.dev/#person",
+        "@id": "https://cv.arturonavax.com/#person",
         "name": "Arturo Nava",
         "jobTitle": "Senior Software Engineer",
         "description": "Senior Software Engineer specialized in Distributed Systems, High-Concurrency (Golang, Rust), and Application Security.",
-        "url": "https://cv.arturonavax.workers.dev/",
+        "url": "https://cv.arturonavax.com/",
         "email": "mailto:arturonavax@gmail.com",
         "telephone": "+573242009803",
         "address": {
@@ -71,12 +71,12 @@
       },
       {
         "@type": "ProfilePage",
-        "@id": "https://cv.arturonavax.workers.dev/#webpage",
-        "url": "https://cv.arturonavax.workers.dev/",
+        "@id": "https://cv.arturonavax.com/#webpage",
+        "url": "https://cv.arturonavax.com/",
         "name": "Arturo Nava - Curriculum Vitae",
         "inLanguage": "en",
         "mainEntity": {
-          "@id": "https://cv.arturonavax.workers.dev/#person"
+          "@id": "https://cv.arturonavax.com/#person"
         }
       }
     ]
@@ -665,7 +665,7 @@ hr {
         file: './ArturoNava-CV-es.html',
         pageTitle: 'Arturo Nava - CV (Español)',
         langAttr: 'es',
-        printLabel: 'Imprimir PDF'
+        printLabel: 'PDF'
       }
     };
 
@@ -685,6 +685,7 @@ hr {
     let currentLang = 'en';
 
     function detectInitialLanguage() {
+      // 1. Prioridad máxima: URL hash o parámetro explícito (#es, #en, ?lang=es, ?lang=en)
       const hash = window.location.hash.toLowerCase().replace('#', '');
       if (hash === 'en' || hash === 'es') return hash;
 
@@ -692,13 +693,15 @@ hr {
       const queryLang = params.get('lang')?.toLowerCase();
       if (queryLang === 'en' || queryLang === 'es') return queryLang;
 
-      const savedLang = localStorage.getItem('cv_lang');
-      if (savedLang === 'en' || savedLang === 'es') return savedLang;
-
-      if (navigator.language && navigator.language.toLowerCase().startsWith('es')) {
-        return 'es';
+      // 2. Detección del idioma del navegador (navigator.languages / navigator.language)
+      const browserLangs = navigator.languages || [navigator.language || ''];
+      for (const l of browserLangs) {
+        const clean = (l || '').toLowerCase();
+        if (clean.startsWith('es')) return 'es';
+        if (clean.startsWith('en')) return 'en';
       }
 
+      // 3. Por defecto English para cualquier otro idioma internacional
       return 'en';
     }
 
