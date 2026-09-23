@@ -1,0 +1,14 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: interest-cohort=(), camera=(), microphone=(), geolocation=()
+  Link: <https://gmpg.org/xfn/11>; rel="profile"
+  Link: <https://fonts.googleapis.com>; rel="preconnect"
+  Link: <https://fonts.gstatic.com>; rel="preconnect"; crossorigin
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
