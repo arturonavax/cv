@@ -98,6 +98,7 @@ _Technologies:_ `Golang (Cobra, Gin)`, `IBM Cloudant`, `Docker`, `Auth0`, `Testi
 
 - **Backend Engineer | PlazaETC** _(Oct 2018 – Dec 2018)_: Engineered multi-vendor e-commerce platforms on AWS, optimizing MySQL database schemas and indexing for catalog search performance.
 - **Backend Software Engineer | 4Geeks Developers Community** _(Apr 2018 – Jul 2018)_: Built high-throughput product referral and affiliate REST APIs in Golang (Echo) with low-latency Aerospike NoSQL caching.
+- **Software Engineer | E.T.C.R Rómulo Gallegos** _(Dec 2017 – Mar 2018)_: Engineered "iRG App", an institutional web pre-enrollment platform with a Golang backend, PostgreSQL, GraphQL, and JWT authentication deployed on Heroku, and developed the institution's official responsive web portal.
 
 ---
 
