@@ -8,6 +8,14 @@
   <meta name="author" content="Arturo Nava">
   <meta name="robots" content="index, follow">
   <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- Profile & Identity Metadata (SEO & Microformats) -->
+  <link rel="profile" href="https://gmpg.org/xfn/11">
+  <link rel="author" href="https://cv.arturonavax.com/">
+  <link rel="me" href="https://github.com/arturonavax">
+  <link rel="me" href="https://www.linkedin.com/in/arturonavax">
+
+  <!-- SEO Canónico y hreflang -->
   <link rel="canonical" href="https://cv.arturonavax.com/ArturoNava-CV-es.html">
   <link rel="alternate" hreflang="en" href="https://cv.arturonavax.com/ArturoNava-CV-en.html">
   <link rel="alternate" hreflang="es" href="https://cv.arturonavax.com/ArturoNava-CV-es.html">
@@ -26,6 +34,7 @@
   <meta property="og:locale" content="es_CO">
   <meta property="profile:first_name" content="Arturo">
   <meta property="profile:last_name" content="Nava">
+  <meta property="profile:username" content="arturonavax">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary">
@@ -91,13 +100,12 @@
   }
   </script>
 
-  <!-- Optimización de Fuentes (Cero bloqueo de renderizado) -->
+  <!-- Optimización de Fuentes (Variable Font + Asíncrono no bloqueante) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@500;600&display=swap" media="print" onload="this.media='all'">
   <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@500;600&display=swap">
   </noscript>
 
   <style>
@@ -111,7 +119,7 @@
 }
 
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 12pt;
   line-height: 1.38;
   color: #1e293b;
@@ -127,6 +135,9 @@ body {
     max-width: none;
     margin: 0;
     padding: 0;
+  }
+  * {
+    content-visibility: visible !important;
   }
 }
 

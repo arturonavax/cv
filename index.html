@@ -9,6 +9,12 @@
   <meta name="robots" content="index, follow">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
+  <!-- Profile & Identity Metadata (SEO & Microformats) -->
+  <link rel="profile" href="https://gmpg.org/xfn/11">
+  <link rel="author" href="https://cv.arturonavax.com/">
+  <link rel="me" href="https://github.com/arturonavax">
+  <link rel="me" href="https://www.linkedin.com/in/arturonavax">
+
   <!-- SEO Canónico y hreflang -->
   <link rel="canonical" href="https://cv.arturonavax.com/">
   <link rel="alternate" hreflang="en" href="https://cv.arturonavax.com/ArturoNava-CV-en.html">
@@ -29,6 +35,7 @@
   <meta property="og:locale:alternate" content="en_US">
   <meta property="profile:first_name" content="Arturo">
   <meta property="profile:last_name" content="Nava">
+  <meta property="profile:username" content="arturonavax">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary">
@@ -95,13 +102,12 @@
   }
   </script>
 
-  <!-- Optimización de Fuentes (Cero bloqueo de renderizado) -->
+  <!-- Optimización de Fuentes (Variable Font + Asíncrono no bloqueante) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@500;600&display=swap" media="print" onload="this.media='all'">
   <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@500;600&display=swap">
   </noscript>
 
   <style>
@@ -128,7 +134,7 @@
       padding: 0;
       background-color: var(--bg-page);
       color: var(--text-main);
-      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       -webkit-font-smoothing: antialiased;
       min-height: 100vh;
       display: flex;
@@ -234,10 +240,6 @@
       position: relative;
     }
 
-    .cv-paper[hidden] {
-      display: none !important;
-    }
-
     /* Botón Flotante para Imprimir PDF */
     .cv-print-fab {
       position: fixed;
@@ -310,8 +312,7 @@
     @media print {
       .no-print,
       .cv-top-bar,
-      .cv-print-fab,
-      .cv-paper[hidden] {
+      .cv-print-fab {
         display: none !important;
       }
 
@@ -329,7 +330,7 @@
         display: block !important;
       }
 
-      .cv-paper:not([hidden]) {
+      .cv-paper {
         border: none !important;
         box-shadow: none !important;
         border-radius: 0 !important;
@@ -353,7 +354,7 @@
 }
 
 .cv-paper {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 12pt;
   line-height: 1.38;
   color: #1e293b;
@@ -369,6 +370,9 @@
     max-width: none;
     margin: 0;
     padding: 0;
+  }
+  * {
+    content-visibility: visible !important;
   }
 }
 
@@ -524,7 +528,7 @@ hr {
         class="cv-lang-btn active" 
         role="tab" 
         aria-selected="true" 
-        aria-controls="cv-paper-es"
+        aria-controls="cv-paper"
         onclick="switchLanguage('es')">
         <span class="flag">🇪🇸</span>
         <span>Español</span>
@@ -534,7 +538,7 @@ hr {
         class="cv-lang-btn" 
         role="tab" 
         aria-selected="false" 
-        aria-controls="cv-paper-en"
+        aria-controls="cv-paper"
         onclick="switchLanguage('en')">
         <span class="flag">🇺🇸</span>
         <span>English</span>
@@ -542,9 +546,9 @@ hr {
     </nav>
   </header>
 
-  <!-- Contenedor del CV: Ambos idiomas pre-renderizados estáticamente (Zero-Network, Zero-Blocking) -->
+  <!-- Contenedor del CV: DOM único ultra-ligero para máxima velocidad de renderizado -->
   <main class="cv-main-wrapper">
-    <article id="cv-paper-es" class="cv-paper" lang="es" aria-live="polite">
+    <article id="cv-paper" class="cv-paper" lang="es" aria-live="polite">
 <h1>Arturo Nava</h1>
 <p><strong>Senior Software Engineer | Sistemas Distribuidos, Alta Concurrencia &amp; Seguridad</strong><br>Bogotá, D.C., Colombia • <a href="mailto:arturonavax@gmail.com">arturonavax@gmail.com</a> • <a href="tel:+573242009803">+57 324 200 9803</a> • <a href="https://www.linkedin.com/in/arturonavax">linkedin.com/in/arturonavax</a> • <a href="https://github.com/arturonavax">github.com/arturonavax</a> • <a href="https://arturonavax.dev">arturonavax.dev</a></p>
 <hr>
@@ -623,7 +627,89 @@ hr {
 <li><strong>Técnico Medio en Informática / Sistemas</strong> | E.T.C.R Rómulo Gallegos (2012 – 2018)</li>
 </ul>
     </article>
-    <article id="cv-paper-en" class="cv-paper" lang="en" aria-live="polite" hidden>
+  </main>
+
+  <!-- Templates en memoria para cambio instantáneo de idioma sin sobrecargar el árbol de render -->
+  <template id="cv-template-es">
+<h1>Arturo Nava</h1>
+<p><strong>Senior Software Engineer | Sistemas Distribuidos, Alta Concurrencia &amp; Seguridad</strong><br>Bogotá, D.C., Colombia • <a href="mailto:arturonavax@gmail.com">arturonavax@gmail.com</a> • <a href="tel:+573242009803">+57 324 200 9803</a> • <a href="https://www.linkedin.com/in/arturonavax">linkedin.com/in/arturonavax</a> • <a href="https://github.com/arturonavax">github.com/arturonavax</a> • <a href="https://arturonavax.dev">arturonavax.dev</a></p>
+<hr>
+<h2>Perfil Profesional / Resumen Ejecutivo</h2>
+<p>Ingeniero de Software Senior con más de 8 años de experiencia en el diseño y escalamiento de arquitecturas distribuidas de misión crítica, servicios backend de alto rendimiento y plataformas de seguridad empresarial en sectores fintech, lealtad y verificación criptográfica. Especializado en el desarrollo de microservicios concurrentes y de baja latencia en <strong>Golang</strong> y <strong>Rust</strong>, arquitectura de motores dinámicos de prevención de fraude en tiempo real, autenticación criptográfica (TOTP/HMAC) y desacoplamiento de bases de datos transaccionales (OLTP) hacia analítica masiva en <strong>Snowflake</strong> (OLAP). Trayectoria comprobada impulsando resiliencia de sistemas, despliegues con cero tiempo de inactividad (<em>zero-downtime</em>), gobernanza automatizada de accesos y rigurosos estándares de DevSecOps.</p>
+<hr>
+<h2>Competencias Técnicas Clave</h2>
+<ul>
+<li><strong>Lenguajes:</strong> Golang (Goroutines, Canales, Concurrencia a bajo nivel), Rust, Node.js / TypeScript, Python, Bash, SQL, C / Assembly (SIMD).</li>
+<li><strong>Sistemas Distribuidos y Arquitectura:</strong> Arquitectura Limpia / Hexagonal, Sistemas Event-Driven, Patrones de Concurrencia (Worker Pools, Mutexes, WaitGroups), APIs REST y gRPC de Alto Rendimiento, Caché Distribuida (Redis), Connection Pooling, Motores de Reglas Dinámicas.</li>
+<li><strong>Datos y Almacenamiento:</strong> PostgreSQL, AWS DynamoDB, Snowflake (Analítica OLAP), Redis, MySQL / MariaDB, SQLite, LevelDB, Aerospike, Optimización de Consultas.</li>
+<li><strong>Ciberseguridad e Identidad:</strong> Seguridad de Aplicaciones, DevSecOps, Seguridad Shift-Left, Hardening Vanta / SOC 2, Remediación de CVEs, Autenticación TOTP / MFA, Firmas Criptográficas (HMAC, Webhooks), OAuth2, Arquitectura Zero-Trust, Minimización de Datos PII, Hardening de Contenedores.</li>
+<li><strong>Cloud, Infraestructura y DevOps:</strong> AWS (DynamoDB, SQS, Secrets Manager, Lambda, S3, IAM), Google Cloud (GCP, BigQuery), Docker, Kubernetes, CI/CD (Jenkins DinD, Hooks pre-commit), Feature Flags (Unleash, Firebase Remote Config), Git, Internals del Kernel de Linux (<code>inotify</code>).</li>
+<li><strong>Prácticas de Ingeniería:</strong> Diseño de Sistemas Distribuidos, RFCs y Documentos de Diseño Técnico, TDD, Domain-Driven Design (DDD), Automatización CI/CD, Modelado de Amenazas.</li>
+</ul>
+<hr>
+<h2>Experiencia Profesional</h2>
+<h3><strong>Leal</strong> — Bogotá, Colombia</h3>
+<p><strong>Senior Software Engineer – Plataforma Core &amp; Seguridad</strong><br><em>Septiembre 2025 – Junio 2026</em></p>
+<ul>
+<li>Diseñé y desplegué microservicios de misión crítica en Golang bajo Arquitectura Limpia/Hexagonal, implementando primitivas de concurrencia (<code>goroutines</code>, canales, worker pools) sobre DynamoDB y Redis para procesamiento no bloqueante de eventos transaccionales.</li>
+<li>Desarrollé desde cero un motor empresarial de prevención de fraude aplicando el Patrón Estrategia para evaluar en tiempo real colusión cajero-cliente y anomalías de velocidad, garantizando endpoints sincrónicos sub-50ms en checkout de POS con consistencia de husos horarios (<code>FlexibleTime</code>).</li>
+<li>Centralicé la plataforma de autenticación en un microservicio unificado de OTP/TOTP, implementando rate limiting estricto, failover transaccional a almacenamiento relacional, facturación multicanal (SMS, WhatsApp, Email) y adjuntos seguros de documentación legal.</li>
+<li>Desacoplé cargas de trabajo analíticas de bases de datos operacionales (OLTP) integrando drivers nativos <code>gosnowflake</code> en microservicios Go, procesando millones de interacciones de marketing hacia tableros de ROI para comercios en tiempo real.</li>
+<li>Lideré la remediación de vulnerabilidades y cumplimiento Vanta / SOC 2 en más de 10 repositorios core, ejecutando hardening de contenedores Alpine con <code>dumb-init</code>, migración a AWS SDK v3 modular y pipelines de contactabilidad en Rust con Feature Flags zero-downtime (Unleash).</li>
+</ul>
+<p><em>Tecnologías:</em> <code>Golang</code>, <code>Rust</code>, <code>AWS (DynamoDB, SQS, Secrets Manager)</code>, <code>Snowflake</code>, <code>PostgreSQL</code>, <code>Redis</code>, <code>Docker</code>, <code>Kubernetes</code>, <code>Jenkins</code>, <code>Unleash</code>.</p>
+<hr>
+<h3><strong>Mercado Libre</strong> — Bogotá, Colombia</h3>
+<p><strong>Senior Backend Security Engineer</strong><br><em>Agosto 2024 – Septiembre 2025</em></p>
+<ul>
+<li>Diseñé e implementé un motor interno de evaluación de riesgo y gobernanza de accesos en Golang y Python, correlacionando telemetría de BigQuery, APIs internas y almacenamiento cloud para auditar permisos y ejecutar protocolos preventivos de mitigación en toda la organización.</li>
+<li>Arquitecté pipelines de detección continua de fugas de información y minimización de datos PII mediante escaneos distribuidos sobre repositorios, commits y entornos de almacenamiento en Google Cloud, previniendo la exposición de credenciales y datos sensibles.</li>
+<li>Implementé controles de seguridad preventiva <em>Shift-Left</em> mediante integraciones en hooks de pre-commit y pipelines de CI/CD, bloqueando proactivamente la fuga de secretos y garantizando la adherencia a políticas de seguridad antes del despliegue en producción.</li>
+<li>Automaticé la orquestación y respuesta a incidentes de seguridad integrando flujos de trabajo en n8n con microservicios en Go y scripts en Bash, optimizando la gestión de tickets y reduciendo significativamente la latencia operativa en la resolución de alertas críticas.</li>
+</ul>
+<p><em>Tecnologías:</em> <code>Golang</code>, <code>Python</code>, <code>Bash</code>, <code>Google Cloud (GCP)</code>, <code>BigQuery</code>, <code>n8n</code>, <code>Docker</code>, <code>CI/CD (Hooks pre-commit)</code>, <code>Minimización PII</code>, <code>Zero-Trust</code>.</p>
+<hr>
+<h3><strong>Imagemaker</strong> — Remoto / Chile</h3>
+<p><strong>Software Engineer – Plataformas de Identidad &amp; Confianza</strong><br><em>Diciembre 2023 – Agosto 2024</em></p>
+<ul>
+<li>Diseñé microservicios de identificación y autorización digital en Golang y PostgreSQL para plataformas de confianza empresarial (SOVOS Trust-Services), mitigando riesgos de suplantación y fraude de identidad y garantizando cumplimiento normativo.</li>
+<li>Construí pipelines de autenticación y verificación biométrica multimodal, integrando reconocimiento facial, validaciones en tiempo real contra bases de datos gubernamentales y flujos dinámicos de preguntas de seguridad (Q&amp;A).</li>
+<li>Implementé estándares de autenticación empresarial incluyendo protocolo OAuth2 y microservicios dinámicos de verificación OTP multicanal, garantizando alta disponibilidad y tolerancia a fallos durante procesos masivos de onboarding.</li>
+</ul>
+<p><em>Tecnologías:</em> <code>Golang</code>, <code>PostgreSQL</code>, <code>OAuth2</code>, <code>OTP</code>, <code>Biometría</code>, <code>Microservicios</code>, <code>Cloud Computing</code>, <code>REST APIs</code>.</p>
+<hr>
+<h3><strong>FYLD, Inc.</strong> — Estados Unidos (Remoto)</h3>
+<p><strong>Co-Founder &amp; Principal Engineer</strong><br><em>Mayo 2019 – Septiembre 2023</em></p>
+<ul>
+<li>Diseñé y escalé una plataforma empresarial de atestiguamiento de datos (Data Witnessing) en Golang, gRPC, PostgreSQL y almacenamiento embebido (LevelDB, SQLite), generando pistas de auditoría inmutables para clientes corporativos.</li>
+<li>Implementé protocolos criptográficos de anclaje de estado basados en modelos UTXO de Bitcoin y árboles de Merkle, registrando compromisos matemáticamente verificables en redes distribuidas.</li>
+<li>Optimicé el rendimiento de cómputo criptográfico mediante instrucciones vectoriales SIMD de bajo nivel (Ensamblador/Go), acelerando operaciones de hashing SHA-256 sobre flujos de datos a gran escala.</li>
+<li>Desarrollé observabilidad de mutaciones de archivos a nivel de kernel interceptando inodos del sistema operativo (<code>inotify</code>), disparando notarizaciones criptográficas automáticas sin sobrecarga de sondeo en espacio de usuario.</li>
+<li>Lideré la dirección técnica, estándares de arquitectura, automatización de pipelines CI/CD y gestión segura del ciclo de vida de claves criptográficas en entornos zero-trust.</li>
+</ul>
+<p><em>Tecnologías:</em> <code>Golang</code>, <code>gRPC</code>, <code>Bitcoin Script / UTXO</code>, <code>SIMD / Assembly</code>, <code>LevelDB</code>, <code>SQLite</code>, <code>PostgreSQL</code>, <code>Kernel de Linux (Inodos)</code>, <code>CI/CD</code>.</p>
+<hr>
+<h3><strong>Cobuild Lab</strong> — Miami, FL, Estados Unidos (Remoto)</h3>
+<p><strong>Backend Software Engineer</strong><br><em>Noviembre 2018 – Junio 2019</em></p>
+<ul>
+<li>Diseñé un coordinador de colas de trabajo concurrentes en Golang con algoritmos de reloj de ventana rodante para regular la tasa de lectura/escritura en base de datos y eliminar contención de bloqueos bajo alto tráfico.</li>
+<li>Construí una herramienta CLI de alto rendimiento (<code>pex-cmd</code>) en Go (Cobra, Testify, Docker) para descompresión de streams GZIP/Deflate, procesamiento masivo y concurrente de archivos XML e ingesta hacia IBM Cloudant.</li>
+<li>Arquitecté y desplegué microservicios REST (<code>pex-retail-api</code>, <code>pex-awardwallet</code>) en Golang (Gin), Docker y Auth0 para búsqueda filtrada de productos, analítica de uso e integración de APIs de recompensas de terceros.</li>
+</ul>
+<p><em>Tecnologías:</em> <code>Golang (Cobra, Gin)</code>, <code>IBM Cloudant</code>, <code>Docker</code>, <code>Auth0</code>, <code>Testify</code>, <code>DigitalOcean</code>, <code>IBM Cloud Foundry</code>.</p>
+<hr>
+<h3><strong>Experiencia Previa</strong></h3>
+<ul>
+<li><strong>Backend Engineer | PlazaETC</strong> <em>(Oct 2018 – Dic 2018)</em>: Implementó plataformas de comercio electrónico multitienda en AWS, optimizando esquemas relacionales e índices en MySQL para rendimiento de consultas en catálogo.</li>
+<li><strong>Backend Software Engineer | 4Geeks Developers Community</strong> <em>(Abr 2018 – Jul 2018)</em>: Construyó APIs REST de alto rendimiento para sistemas de referidos de productos utilizando Golang (Echo) y almacenamiento en caché de baja latencia con Aerospike NoSQL.</li>
+</ul>
+<hr>
+<h2>Educación &amp; Certificaciones</h2>
+<ul>
+<li><strong>Técnico Medio en Informática / Sistemas</strong> | E.T.C.R Rómulo Gallegos (2012 – 2018)</li>
+</ul>
+  </template>
+  <template id="cv-template-en">
 <h1>Arturo Nava</h1>
 <p><strong>Senior Software Engineer | Distributed Systems, High-Concurrency &amp; Security</strong><br>Bogota, D.C., Colombia • <a href="mailto:arturonavax@gmail.com">arturonavax@gmail.com</a> • <a href="tel:+573242009803">+57 324 200 9803</a> • <a href="https://www.linkedin.com/in/arturonavax">linkedin.com/in/arturonavax</a> • <a href="https://github.com/arturonavax">github.com/arturonavax</a> • <a href="https://arturonavax.dev">arturonavax.dev</a></p>
 <hr>
@@ -701,8 +787,7 @@ hr {
 <ul>
 <li><strong>Associate Degree in Computer Systems &amp; Informatics</strong> | E.T.C.R Rómulo Gallegos (2012 – 2018)</li>
 </ul>
-    </article>
-  </main>
+  </template>
 
   <!-- Botón Flotante a la Derecha para Imprimir PDF -->
   <button 
@@ -723,14 +808,14 @@ hr {
     function switchLanguage(lang) {
       if (lang !== 'en' && lang !== 'es') return;
       const isEn = (lang === 'en');
-      const paperEs = document.getElementById('cv-paper-es');
-      const paperEn = document.getElementById('cv-paper-en');
+      const paper = document.getElementById('cv-paper');
+      const tpl = document.getElementById(isEn ? 'cv-template-en' : 'cv-template-es');
       const btnEs = document.getElementById('btn-lang-es');
       const btnEn = document.getElementById('btn-lang-en');
 
-      if (paperEs && paperEn) {
-        paperEs.hidden = isEn;
-        paperEn.hidden = !isEn;
+      if (paper && tpl && currentLang !== lang) {
+        paper.innerHTML = tpl.innerHTML;
+        paper.lang = lang;
       }
 
       if (btnEs && btnEn) {
@@ -760,7 +845,7 @@ hr {
       // 1. Prioridad: URL Hash (#en o #es)
       const hash = (window.location.hash || '').toLowerCase().replace('#', '');
       if (hash === 'en' || hash === 'es') {
-        switchLanguage(hash);
+        if (hash !== 'es') switchLanguage(hash);
         return;
       }
 
@@ -769,7 +854,7 @@ hr {
         const params = new URLSearchParams(window.location.search);
         const queryLang = params.get('lang')?.toLowerCase();
         if (queryLang === 'en' || queryLang === 'es') {
-          switchLanguage(queryLang);
+          if (queryLang !== 'es') switchLanguage(queryLang);
           return;
         }
       } catch (e) {}
@@ -778,7 +863,7 @@ hr {
       try {
         const saved = localStorage.getItem('cv_lang')?.toLowerCase();
         if (saved === 'en' || saved === 'es') {
-          switchLanguage(saved);
+          if (saved !== 'es') switchLanguage(saved);
           return;
         }
       } catch (e) {}
@@ -792,7 +877,6 @@ hr {
           return;
         }
         if (clean.startsWith('es')) {
-          switchLanguage('es');
           return;
         }
       }
