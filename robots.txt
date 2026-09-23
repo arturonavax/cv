@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cv.arturonavax.workers.dev/sitemap.xml
+Sitemap: https://cv.arturonavax.com/sitemap.xml

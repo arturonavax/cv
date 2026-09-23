@@ -1,13 +1,13 @@
 # Arturo Nava
 
 **Senior Software Engineer | Sistemas Distribuidos, Alta Concurrencia & Seguridad**  
-Bogotá, D.C., Colombia • [arturonavax@gmail.com](mailto:arturonavax@gmail.com) • [+57 324 200 9803](tel:+573242009803) • [linkedin.com/in/arturonavax](https://www.linkedin.com/in/arturonavax) • [github.com/arturonavax](https://github.com/arturonavax)
+Bogotá, D.C., Colombia • [arturonavax@gmail.com](mailto:arturonavax@gmail.com) • [+57 324 200 9803](tel:+573242009803) • [linkedin.com/in/arturonavax](https://www.linkedin.com/in/arturonavax) • [github.com/arturonavax](https://github.com/arturonavax) • [arturonavax.dev](https://arturonavax.dev)
 
 ---
 
 ## Perfil Profesional / Resumen Ejecutivo
 
-Ingeniero de Software Senior con más de 8 años de experiencia en el diseño y escalamiento de arquitecturas distribuidas de misión crítica, servicios backend de alto rendimiento y plataformas de seguridad empresarial en sectores fintech, lealtad y verificación criptográfica. Especializado en el desarrollo de microservicios concurrentes y de baja latencia en **Golang** y **Rust**, arquitectura de motores dinámicos de prevención de fraude en tiempo real, autenticación criptográfica (TOTP/HMAC) y desacoplamiento de bases de datos transaccionales (OLTP) hacia analítica masiva en **Snowflake** (OLAP). Trayectoria comprobada impulsando resiliencia de sistemas, despliegues con cero tiempo de inactividad (*zero-downtime*), gobernanza automatizada de accesos y rigurosos estándares de DevSecOps.
+Ingeniero de Software Senior con más de 8 años de experiencia en el diseño y escalamiento de arquitecturas distribuidas de misión crítica, servicios backend de alto rendimiento y plataformas de seguridad empresarial en sectores fintech, lealtad y verificación criptográfica. Especializado en el desarrollo de microservicios concurrentes y de baja latencia en **Golang** y **Rust**, arquitectura de motores dinámicos de prevención de fraude en tiempo real, autenticación criptográfica (TOTP/HMAC) y desacoplamiento de bases de datos transaccionales (OLTP) hacia analítica masiva en **Snowflake** (OLAP). Trayectoria comprobada impulsando resiliencia de sistemas, despliegues con cero tiempo de inactividad (_zero-downtime_), gobernanza automatizada de accesos y rigurosos estándares de DevSecOps.
 
 ---
 
@@ -25,8 +25,9 @@ Ingeniero de Software Senior con más de 8 años de experiencia en el diseño y 
 ## Experiencia Profesional
 
 ### **Leal** — Bogotá, Colombia
+
 **Senior Software Engineer – Plataforma Core & Seguridad**  
-*Septiembre 2025 – Junio 2026*
+_Septiembre 2025 – Junio 2026_
 
 - Diseñé y desplegué microservicios de misión crítica en Golang bajo Arquitectura Limpia/Hexagonal, implementando primitivas de concurrencia (`goroutines`, canales, worker pools) sobre DynamoDB y Redis para procesamiento no bloqueante de eventos transaccionales.
 - Desarrollé desde cero un motor empresarial de prevención de fraude aplicando el Patrón Estrategia para evaluar en tiempo real colusión cajero-cliente y anomalías de velocidad, garantizando endpoints sincrónicos sub-50ms en checkout de POS con consistencia de husos horarios (`FlexibleTime`).
@@ -39,12 +40,13 @@ _Tecnologías:_ `Golang`, `Rust`, `AWS (DynamoDB, SQS, Secrets Manager)`, `Snowf
 ---
 
 ### **Mercado Libre** — Bogotá, Colombia
+
 **Senior Backend Security Engineer**  
-*Agosto 2024 – Septiembre 2025*
+_Agosto 2024 – Septiembre 2025_
 
 - Diseñé e implementé un motor interno de evaluación de riesgo y gobernanza de accesos en Golang y Python, correlacionando telemetría de BigQuery, APIs internas y almacenamiento cloud para auditar permisos y ejecutar protocolos preventivos de mitigación en toda la organización.
 - Arquitecté pipelines de detección continua de fugas de información y minimización de datos PII mediante escaneos distribuidos sobre repositorios, commits y entornos de almacenamiento en Google Cloud, previniendo la exposición de credenciales y datos sensibles.
-- Implementé controles de seguridad preventiva *Shift-Left* mediante integraciones en hooks de pre-commit y pipelines de CI/CD, bloqueando proactivamente la fuga de secretos y garantizando la adherencia a políticas de seguridad antes del despliegue en producción.
+- Implementé controles de seguridad preventiva _Shift-Left_ mediante integraciones en hooks de pre-commit y pipelines de CI/CD, bloqueando proactivamente la fuga de secretos y garantizando la adherencia a políticas de seguridad antes del despliegue en producción.
 - Automaticé la orquestación y respuesta a incidentes de seguridad integrando flujos de trabajo en n8n con microservicios en Go y scripts en Bash, optimizando la gestión de tickets y reduciendo significativamente la latencia operativa en la resolución de alertas críticas.
 
 _Tecnologías:_ `Golang`, `Python`, `Bash`, `Google Cloud (GCP)`, `BigQuery`, `n8n`, `Docker`, `CI/CD (Hooks pre-commit)`, `Minimización PII`, `Zero-Trust`.
@@ -52,8 +54,9 @@ _Tecnologías:_ `Golang`, `Python`, `Bash`, `Google Cloud (GCP)`, `BigQuery`, `n
 ---
 
 ### **Imagemaker** — Remoto / Chile
+
 **Software Engineer – Plataformas de Identidad & Confianza**  
-*Diciembre 2023 – Agosto 2024*
+_Diciembre 2023 – Agosto 2024_
 
 - Diseñé microservicios de identificación y autorización digital en Golang y PostgreSQL para plataformas de confianza empresarial (SOVOS Trust-Services), mitigando riesgos de suplantación y fraude de identidad y garantizando cumplimiento normativo.
 - Construí pipelines de autenticación y verificación biométrica multimodal, integrando reconocimiento facial, validaciones en tiempo real contra bases de datos gubernamentales y flujos dinámicos de preguntas de seguridad (Q&A).
@@ -64,8 +67,9 @@ _Tecnologías:_ `Golang`, `PostgreSQL`, `OAuth2`, `OTP`, `Biometría`, `Microser
 ---
 
 ### **FYLD, Inc.** — Estados Unidos (Remoto)
+
 **Co-Founder & Principal Engineer**  
-*Mayo 2019 – Septiembre 2023*
+_Mayo 2019 – Septiembre 2023_
 
 - Diseñé y escalé una plataforma empresarial de atestiguamiento de datos (Data Witnessing) en Golang, gRPC, PostgreSQL y almacenamiento embebido (LevelDB, SQLite), generando pistas de auditoría inmutables para clientes corporativos.
 - Implementé protocolos criptográficos de anclaje de estado basados en modelos UTXO de Bitcoin y árboles de Merkle, registrando compromisos matemáticamente verificables en redes distribuidas.
@@ -78,8 +82,9 @@ _Tecnologías:_ `Golang`, `gRPC`, `Bitcoin Script / UTXO`, `SIMD / Assembly`, `L
 ---
 
 ### **Cobuild Lab** — Miami, FL, Estados Unidos (Remoto)
+
 **Backend Software Engineer**  
-*Noviembre 2018 – Junio 2019*
+_Noviembre 2018 – Junio 2019_
 
 - Diseñé un coordinador de colas de trabajo concurrentes en Golang con algoritmos de reloj de ventana rodante para regular la tasa de lectura/escritura en base de datos y eliminar contención de bloqueos bajo alto tráfico.
 - Construí una herramienta CLI de alto rendimiento (`pex-cmd`) en Go (Cobra, Testify, Docker) para descompresión de streams GZIP/Deflate, procesamiento masivo y concurrente de archivos XML e ingesta hacia IBM Cloudant.
@@ -91,8 +96,8 @@ _Tecnologías:_ `Golang (Cobra, Gin)`, `IBM Cloudant`, `Docker`, `Auth0`, `Testi
 
 ### **Experiencia Previa**
 
-- **Backend Engineer | PlazaETC** *(Oct 2018 – Dic 2018)*: Implementó plataformas de comercio electrónico multitienda en AWS, optimizando esquemas relacionales e índices en MySQL para rendimiento de consultas en catálogo.
-- **Backend Software Engineer | 4Geeks Developers Community** *(Abr 2018 – Jul 2018)*: Construyó APIs REST de alto rendimiento para sistemas de referidos de productos utilizando Golang (Echo) y almacenamiento en caché de baja latencia con Aerospike NoSQL.
+- **Backend Engineer | PlazaETC** _(Oct 2018 – Dic 2018)_: Implementó plataformas de comercio electrónico multitienda en AWS, optimizando esquemas relacionales e índices en MySQL para rendimiento de consultas en catálogo.
+- **Backend Software Engineer | 4Geeks Developers Community** _(Abr 2018 – Jul 2018)_: Construyó APIs REST de alto rendimiento para sistemas de referidos de productos utilizando Golang (Echo) y almacenamiento en caché de baja latencia con Aerospike NoSQL.
 
 ---
 

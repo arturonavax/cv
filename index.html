@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Arturo Nava | Senior Software Engineer - Curriculum Vitae</title>
-  <meta name="description" content="Senior Software Engineer with 8+ years designing and scaling mission-critical distributed architectures, high-concurrency microservices (Golang, Rust), and enterprise security platforms.">
+  <title>Arturo Nava - Senior Engineer CV</title>
+  <meta name="description" content="CV profesional de Arturo Nava, Senior Software Engineer especializado en Go, Rust y Python.">
   <meta name="author" content="Arturo Nava">
   <meta name="robots" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- SEO Canónico y hreflang -->
   <link rel="canonical" href="https://cv.arturonavax.com/">
@@ -14,19 +15,26 @@
   <link rel="alternate" hreflang="es" href="https://cv.arturonavax.com/ArturoNava-CV-es.html">
   <link rel="alternate" hreflang="x-default" href="https://cv.arturonavax.com/">
 
-  <!-- OpenGraph / LinkedIn / Facebook -->
+  <!-- Open Graph para LinkedIn/WhatsApp -->
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Arturo Nava | Senior Software Engineer CV">
-  <meta property="og:description" content="Senior Software Engineer with 8+ years experience in Distributed Systems, High-Concurrency (Golang, Rust), and Enterprise Security.">
-  <meta property="og:url" content="https://cv.arturonavax.com/">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Arturo Nava - CV">
+  <meta property="og:description" content="Senior Software Engineer">
+  <meta property="og:url" content="https://cv.arturonavax.com">
+  <meta property="og:site_name" content="Arturo Nava - CV">
+  <meta property="og:image" content="https://github.com/arturonavax.png">
+  <meta property="og:image:alt" content="Arturo Nava - Senior Software Engineer">
+  <meta property="og:image:width" content="400">
+  <meta property="og:image:height" content="400">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="profile:first_name" content="Arturo">
   <meta property="profile:last_name" content="Nava">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Arturo Nava | Senior Software Engineer CV">
-  <meta name="twitter:description" content="Senior Software Engineer with 8+ years experience in Distributed Systems, High-Concurrency (Golang, Rust), and Enterprise Security.">
+  <meta name="twitter:title" content="Arturo Nava - CV">
+  <meta name="twitter:description" content="Senior Software Engineer">
+  <meta name="twitter:image" content="https://github.com/arturonavax.png">
 
   <!-- Schema.org Person & ProfilePage (JSON-LD) -->
   <script type="application/ld+json">
@@ -38,8 +46,9 @@
         "@id": "https://cv.arturonavax.com/#person",
         "name": "Arturo Nava",
         "jobTitle": "Senior Software Engineer",
-        "description": "Senior Software Engineer specialized in Distributed Systems, High-Concurrency (Golang, Rust), and Application Security.",
+        "description": "CV profesional de Arturo Nava, Senior Software Engineer especializado en Go, Rust y Python. Sistemas Distribuidos, Microservicios y Ciberseguridad.",
         "url": "https://cv.arturonavax.com/",
+        "image": "https://github.com/arturonavax.png",
         "email": "mailto:arturonavax@gmail.com",
         "telephone": "+573242009803",
         "address": {
@@ -52,8 +61,10 @@
           "https://github.com/arturonavax"
         ],
         "knowsAbout": [
+          "Go",
           "Golang",
           "Rust",
+          "Python",
           "Distributed Systems",
           "High-Concurrency",
           "Microservices",
@@ -73,8 +84,9 @@
         "@type": "ProfilePage",
         "@id": "https://cv.arturonavax.com/#webpage",
         "url": "https://cv.arturonavax.com/",
-        "name": "Arturo Nava - Curriculum Vitae",
-        "inLanguage": "en",
+        "name": "Arturo Nava - Senior Engineer CV",
+        "description": "CV profesional de Arturo Nava, Senior Software Engineer especializado en Go, Rust y Python.",
+        "inLanguage": ["es", "en"],
         "mainEntity": {
           "@id": "https://cv.arturonavax.com/#person"
         }
@@ -83,16 +95,21 @@
   }
   </script>
 
+  <!-- Optimización de Fuentes (Cero bloqueo de renderizado) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+  </noscript>
 
   <style>
     :root {
       --bg-page: #f8fafc;
       --bg-surface: #ffffff;
       --text-main: #0f172a;
-      --text-muted: #64748b;
+      --text-muted: #475569;
       --border-color: #e2e8f0;
       --accent: #0f172a;
       --accent-hover: #1e293b;
@@ -123,7 +140,7 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(255, 255, 255, 0.88);
+      background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border-color);
@@ -148,11 +165,11 @@
 
     .cv-brand span {
       color: var(--text-muted);
-      font-weight: 400;
+      font-weight: 500;
       font-size: 0.95rem;
     }
 
-    /* Selector de Idiomas / Botones Grandes */
+    /* Selector de Idiomas / Botones con Contraste WCAG AA Compliant */
     .cv-lang-switch {
       display: inline-flex;
       background-color: #f1f5f9;
@@ -172,9 +189,9 @@
       font-family: inherit;
       font-size: 0.95rem;
       font-weight: 600;
-      color: var(--text-muted);
+      color: #334155;
       cursor: pointer;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: background-color 0.15s ease, color 0.15s ease;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
@@ -184,7 +201,7 @@
 
     .cv-lang-btn:hover:not(.active) {
       color: var(--text-main);
-      background-color: rgba(226, 232, 240, 0.6);
+      background-color: rgba(226, 232, 240, 0.7);
     }
 
     .cv-lang-btn.active {
@@ -206,7 +223,7 @@
       justify-content: center;
     }
 
-    #cv-paper {
+    .cv-paper {
       background-color: var(--bg-surface);
       width: 100%;
       max-width: 210mm;
@@ -215,13 +232,10 @@
       border: 1px solid var(--border-color);
       border-radius: 6px;
       position: relative;
-      transition: opacity 0.15s ease-in-out;
-      opacity: 1;
     }
 
-    #cv-paper.loading {
-      opacity: 0.35;
-      pointer-events: none;
+    .cv-paper[hidden] {
+      display: none !important;
     }
 
     /* Botón Flotante para Imprimir PDF */
@@ -269,35 +283,6 @@
       stroke-linejoin: round;
     }
 
-    /* Estado de Error */
-    .cv-error-box {
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-      color: #b91c1c;
-      background: #fef2f2;
-      border: 1px solid #fecaca;
-      border-radius: 8px;
-      max-width: 500px;
-      margin: 2rem auto;
-    }
-
-    .cv-error-box h3 {
-      margin: 0 0 0.5rem 0;
-      color: #991b1b;
-    }
-
-    .cv-error-box p {
-      margin: 0 0 1rem 0;
-      font-size: 0.95rem;
-      color: #7f1d1d;
-    }
-
-    .cv-error-box a {
-      color: #1e3a8a;
-      text-decoration: underline;
-      font-weight: 600;
-    }
-
     /* Responsive */
     @media (max-width: 820px) {
       .cv-top-bar {
@@ -308,7 +293,7 @@
       .cv-main-wrapper {
         padding: 0.75rem 0.5rem 5rem 0.5rem;
       }
-      #cv-paper {
+      .cv-paper {
         padding: 16px 18px;
         border-radius: 4px;
         box-shadow: var(--shadow-sm);
@@ -326,7 +311,7 @@
       .no-print,
       .cv-top-bar,
       .cv-print-fab,
-      .cv-error-box {
+      .cv-paper[hidden] {
         display: none !important;
       }
 
@@ -344,7 +329,7 @@
         display: block !important;
       }
 
-      #cv-paper {
+      .cv-paper:not([hidden]) {
         border: none !important;
         box-shadow: none !important;
         border-radius: 0 !important;
@@ -356,10 +341,8 @@
     }
   </style>
 
-  <!-- Estilos inyectados dinámicamente del CV activo (Pre-renderizados en inglés) -->
+  <!-- Estilos del contenido del CV -->
   <style id="cv-injected-styles">
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
-
 @page {
   size: A4;
   margin: 11mm 13mm 11mm 13mm;
@@ -369,7 +352,7 @@
   box-sizing: border-box;
 }
 
-#cv-paper {
+.cv-paper {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 12pt;
   line-height: 1.38;
@@ -382,7 +365,7 @@
 }
 
 @media print {
-  #cv-paper {
+  .cv-paper {
     max-width: none;
     margin: 0;
     padding: 0;
@@ -463,7 +446,7 @@ h3 + p > strong {
 h3 + p > em {
   font-style: normal;
   font-variant-numeric: tabular-nums;
-  color: #64748b;
+  color: #475569;
   margin-left: 2px;
 }
 
@@ -529,39 +512,120 @@ hr {
 </head>
 <body>
 
-  <!-- Barra Superior con Botones Grandes de Idioma -->
+  <!-- Barra Superior con Botones de Idioma -->
   <header class="cv-top-bar no-print">
     <div class="cv-brand">
       Arturo Nava <span>/ Curriculum Vitae</span>
     </div>
 
-    <nav class="cv-lang-switch" role="tablist" aria-label="Language Selector">
+    <nav class="cv-lang-switch" role="tablist" aria-label="Selector de idioma / Language selector">
       <button 
-        id="btn-lang-en" 
+        id="btn-lang-es" 
         class="cv-lang-btn active" 
         role="tab" 
         aria-selected="true" 
-        onclick="switchLanguage('en')">
-        <span class="flag">🇺🇸</span>
-        <span>English</span>
-      </button>
-      <button 
-        id="btn-lang-es" 
-        class="cv-lang-btn" 
-        role="tab" 
-        aria-selected="false" 
+        aria-controls="cv-paper-es"
         onclick="switchLanguage('es')">
         <span class="flag">🇪🇸</span>
         <span>Español</span>
       </button>
+      <button 
+        id="btn-lang-en" 
+        class="cv-lang-btn" 
+        role="tab" 
+        aria-selected="false" 
+        aria-controls="cv-paper-en"
+        onclick="switchLanguage('en')">
+        <span class="flag">🇺🇸</span>
+        <span>English</span>
+      </button>
     </nav>
   </header>
 
-  <!-- Contenedor del CV: Pre-renderizado estáticamente con el contenido en inglés para bots y SEO -->
+  <!-- Contenedor del CV: Ambos idiomas pre-renderizados estáticamente (Zero-Network, Zero-Blocking) -->
   <main class="cv-main-wrapper">
-    <article id="cv-paper" aria-live="polite">
+    <article id="cv-paper-es" class="cv-paper" lang="es" aria-live="polite">
 <h1>Arturo Nava</h1>
-<p><strong>Senior Software Engineer | Distributed Systems, High-Concurrency &amp; Security</strong><br>Bogota, D.C., Colombia • <a href="mailto:arturonavax@gmail.com">arturonavax@gmail.com</a> • <a href="tel:+573242009803">+57 324 200 9803</a> • <a href="https://www.linkedin.com/in/arturonavax">linkedin.com/in/arturonavax</a> • <a href="https://github.com/arturonavax">github.com/arturonavax</a></p>
+<p><strong>Senior Software Engineer | Sistemas Distribuidos, Alta Concurrencia &amp; Seguridad</strong><br>Bogotá, D.C., Colombia • <a href="mailto:arturonavax@gmail.com">arturonavax@gmail.com</a> • <a href="tel:+573242009803">+57 324 200 9803</a> • <a href="https://www.linkedin.com/in/arturonavax">linkedin.com/in/arturonavax</a> • <a href="https://github.com/arturonavax">github.com/arturonavax</a> • <a href="https://arturonavax.dev">arturonavax.dev</a></p>
+<hr>
+<h2>Perfil Profesional / Resumen Ejecutivo</h2>
+<p>Ingeniero de Software Senior con más de 8 años de experiencia en el diseño y escalamiento de arquitecturas distribuidas de misión crítica, servicios backend de alto rendimiento y plataformas de seguridad empresarial en sectores fintech, lealtad y verificación criptográfica. Especializado en el desarrollo de microservicios concurrentes y de baja latencia en <strong>Golang</strong> y <strong>Rust</strong>, arquitectura de motores dinámicos de prevención de fraude en tiempo real, autenticación criptográfica (TOTP/HMAC) y desacoplamiento de bases de datos transaccionales (OLTP) hacia analítica masiva en <strong>Snowflake</strong> (OLAP). Trayectoria comprobada impulsando resiliencia de sistemas, despliegues con cero tiempo de inactividad (<em>zero-downtime</em>), gobernanza automatizada de accesos y rigurosos estándares de DevSecOps.</p>
+<hr>
+<h2>Competencias Técnicas Clave</h2>
+<ul>
+<li><strong>Lenguajes:</strong> Golang (Goroutines, Canales, Concurrencia a bajo nivel), Rust, Node.js / TypeScript, Python, Bash, SQL, C / Assembly (SIMD).</li>
+<li><strong>Sistemas Distribuidos y Arquitectura:</strong> Arquitectura Limpia / Hexagonal, Sistemas Event-Driven, Patrones de Concurrencia (Worker Pools, Mutexes, WaitGroups), APIs REST y gRPC de Alto Rendimiento, Caché Distribuida (Redis), Connection Pooling, Motores de Reglas Dinámicas.</li>
+<li><strong>Datos y Almacenamiento:</strong> PostgreSQL, AWS DynamoDB, Snowflake (Analítica OLAP), Redis, MySQL / MariaDB, SQLite, LevelDB, Aerospike, Optimización de Consultas.</li>
+<li><strong>Ciberseguridad e Identidad:</strong> Seguridad de Aplicaciones, DevSecOps, Seguridad Shift-Left, Hardening Vanta / SOC 2, Remediación de CVEs, Autenticación TOTP / MFA, Firmas Criptográficas (HMAC, Webhooks), OAuth2, Arquitectura Zero-Trust, Minimización de Datos PII, Hardening de Contenedores.</li>
+<li><strong>Cloud, Infraestructura y DevOps:</strong> AWS (DynamoDB, SQS, Secrets Manager, Lambda, S3, IAM), Google Cloud (GCP, BigQuery), Docker, Kubernetes, CI/CD (Jenkins DinD, Hooks pre-commit), Feature Flags (Unleash, Firebase Remote Config), Git, Internals del Kernel de Linux (<code>inotify</code>).</li>
+<li><strong>Prácticas de Ingeniería:</strong> Diseño de Sistemas Distribuidos, RFCs y Documentos de Diseño Técnico, TDD, Domain-Driven Design (DDD), Automatización CI/CD, Modelado de Amenazas.</li>
+</ul>
+<hr>
+<h2>Experiencia Profesional</h2>
+<h3><strong>Leal</strong> — Bogotá, Colombia</h3>
+<p><strong>Senior Software Engineer – Plataforma Core &amp; Seguridad</strong><br><em>Septiembre 2025 – Junio 2026</em></p>
+<ul>
+<li>Diseñé y desplegué microservicios de misión crítica en Golang bajo Arquitectura Limpia/Hexagonal, implementando primitivas de concurrencia (<code>goroutines</code>, canales, worker pools) sobre DynamoDB y Redis para procesamiento no bloqueante de eventos transaccionales.</li>
+<li>Desarrollé desde cero un motor empresarial de prevención de fraude aplicando el Patrón Estrategia para evaluar en tiempo real colusión cajero-cliente y anomalías de velocidad, garantizando endpoints sincrónicos sub-50ms en checkout de POS con consistencia de husos horarios (<code>FlexibleTime</code>).</li>
+<li>Centralicé la plataforma de autenticación en un microservicio unificado de OTP/TOTP, implementando rate limiting estricto, failover transaccional a almacenamiento relacional, facturación multicanal (SMS, WhatsApp, Email) y adjuntos seguros de documentación legal.</li>
+<li>Desacoplé cargas de trabajo analíticas de bases de datos operacionales (OLTP) integrando drivers nativos <code>gosnowflake</code> en microservicios Go, procesando millones de interacciones de marketing hacia tableros de ROI para comercios en tiempo real.</li>
+<li>Lideré la remediación de vulnerabilidades y cumplimiento Vanta / SOC 2 en más de 10 repositorios core, ejecutando hardening de contenedores Alpine con <code>dumb-init</code>, migración a AWS SDK v3 modular y pipelines de contactabilidad en Rust con Feature Flags zero-downtime (Unleash).</li>
+</ul>
+<p><em>Tecnologías:</em> <code>Golang</code>, <code>Rust</code>, <code>AWS (DynamoDB, SQS, Secrets Manager)</code>, <code>Snowflake</code>, <code>PostgreSQL</code>, <code>Redis</code>, <code>Docker</code>, <code>Kubernetes</code>, <code>Jenkins</code>, <code>Unleash</code>.</p>
+<hr>
+<h3><strong>Mercado Libre</strong> — Bogotá, Colombia</h3>
+<p><strong>Senior Backend Security Engineer</strong><br><em>Agosto 2024 – Septiembre 2025</em></p>
+<ul>
+<li>Diseñé e implementé un motor interno de evaluación de riesgo y gobernanza de accesos en Golang y Python, correlacionando telemetría de BigQuery, APIs internas y almacenamiento cloud para auditar permisos y ejecutar protocolos preventivos de mitigación en toda la organización.</li>
+<li>Arquitecté pipelines de detección continua de fugas de información y minimización de datos PII mediante escaneos distribuidos sobre repositorios, commits y entornos de almacenamiento en Google Cloud, previniendo la exposición de credenciales y datos sensibles.</li>
+<li>Implementé controles de seguridad preventiva <em>Shift-Left</em> mediante integraciones en hooks de pre-commit y pipelines de CI/CD, bloqueando proactivamente la fuga de secretos y garantizando la adherencia a políticas de seguridad antes del despliegue en producción.</li>
+<li>Automaticé la orquestación y respuesta a incidentes de seguridad integrando flujos de trabajo en n8n con microservicios en Go y scripts en Bash, optimizando la gestión de tickets y reduciendo significativamente la latencia operativa en la resolución de alertas críticas.</li>
+</ul>
+<p><em>Tecnologías:</em> <code>Golang</code>, <code>Python</code>, <code>Bash</code>, <code>Google Cloud (GCP)</code>, <code>BigQuery</code>, <code>n8n</code>, <code>Docker</code>, <code>CI/CD (Hooks pre-commit)</code>, <code>Minimización PII</code>, <code>Zero-Trust</code>.</p>
+<hr>
+<h3><strong>Imagemaker</strong> — Remoto / Chile</h3>
+<p><strong>Software Engineer – Plataformas de Identidad &amp; Confianza</strong><br><em>Diciembre 2023 – Agosto 2024</em></p>
+<ul>
+<li>Diseñé microservicios de identificación y autorización digital en Golang y PostgreSQL para plataformas de confianza empresarial (SOVOS Trust-Services), mitigando riesgos de suplantación y fraude de identidad y garantizando cumplimiento normativo.</li>
+<li>Construí pipelines de autenticación y verificación biométrica multimodal, integrando reconocimiento facial, validaciones en tiempo real contra bases de datos gubernamentales y flujos dinámicos de preguntas de seguridad (Q&amp;A).</li>
+<li>Implementé estándares de autenticación empresarial incluyendo protocolo OAuth2 y microservicios dinámicos de verificación OTP multicanal, garantizando alta disponibilidad y tolerancia a fallos durante procesos masivos de onboarding.</li>
+</ul>
+<p><em>Tecnologías:</em> <code>Golang</code>, <code>PostgreSQL</code>, <code>OAuth2</code>, <code>OTP</code>, <code>Biometría</code>, <code>Microservicios</code>, <code>Cloud Computing</code>, <code>REST APIs</code>.</p>
+<hr>
+<h3><strong>FYLD, Inc.</strong> — Estados Unidos (Remoto)</h3>
+<p><strong>Co-Founder &amp; Principal Engineer</strong><br><em>Mayo 2019 – Septiembre 2023</em></p>
+<ul>
+<li>Diseñé y escalé una plataforma empresarial de atestiguamiento de datos (Data Witnessing) en Golang, gRPC, PostgreSQL y almacenamiento embebido (LevelDB, SQLite), generando pistas de auditoría inmutables para clientes corporativos.</li>
+<li>Implementé protocolos criptográficos de anclaje de estado basados en modelos UTXO de Bitcoin y árboles de Merkle, registrando compromisos matemáticamente verificables en redes distribuidas.</li>
+<li>Optimicé el rendimiento de cómputo criptográfico mediante instrucciones vectoriales SIMD de bajo nivel (Ensamblador/Go), acelerando operaciones de hashing SHA-256 sobre flujos de datos a gran escala.</li>
+<li>Desarrollé observabilidad de mutaciones de archivos a nivel de kernel interceptando inodos del sistema operativo (<code>inotify</code>), disparando notarizaciones criptográficas automáticas sin sobrecarga de sondeo en espacio de usuario.</li>
+<li>Lideré la dirección técnica, estándares de arquitectura, automatización de pipelines CI/CD y gestión segura del ciclo de vida de claves criptográficas en entornos zero-trust.</li>
+</ul>
+<p><em>Tecnologías:</em> <code>Golang</code>, <code>gRPC</code>, <code>Bitcoin Script / UTXO</code>, <code>SIMD / Assembly</code>, <code>LevelDB</code>, <code>SQLite</code>, <code>PostgreSQL</code>, <code>Kernel de Linux (Inodos)</code>, <code>CI/CD</code>.</p>
+<hr>
+<h3><strong>Cobuild Lab</strong> — Miami, FL, Estados Unidos (Remoto)</h3>
+<p><strong>Backend Software Engineer</strong><br><em>Noviembre 2018 – Junio 2019</em></p>
+<ul>
+<li>Diseñé un coordinador de colas de trabajo concurrentes en Golang con algoritmos de reloj de ventana rodante para regular la tasa de lectura/escritura en base de datos y eliminar contención de bloqueos bajo alto tráfico.</li>
+<li>Construí una herramienta CLI de alto rendimiento (<code>pex-cmd</code>) en Go (Cobra, Testify, Docker) para descompresión de streams GZIP/Deflate, procesamiento masivo y concurrente de archivos XML e ingesta hacia IBM Cloudant.</li>
+<li>Arquitecté y desplegué microservicios REST (<code>pex-retail-api</code>, <code>pex-awardwallet</code>) en Golang (Gin), Docker y Auth0 para búsqueda filtrada de productos, analítica de uso e integración de APIs de recompensas de terceros.</li>
+</ul>
+<p><em>Tecnologías:</em> <code>Golang (Cobra, Gin)</code>, <code>IBM Cloudant</code>, <code>Docker</code>, <code>Auth0</code>, <code>Testify</code>, <code>DigitalOcean</code>, <code>IBM Cloud Foundry</code>.</p>
+<hr>
+<h3><strong>Experiencia Previa</strong></h3>
+<ul>
+<li><strong>Backend Engineer | PlazaETC</strong> <em>(Oct 2018 – Dic 2018)</em>: Implementó plataformas de comercio electrónico multitienda en AWS, optimizando esquemas relacionales e índices en MySQL para rendimiento de consultas en catálogo.</li>
+<li><strong>Backend Software Engineer | 4Geeks Developers Community</strong> <em>(Abr 2018 – Jul 2018)</em>: Construyó APIs REST de alto rendimiento para sistemas de referidos de productos utilizando Golang (Echo) y almacenamiento en caché de baja latencia con Aerospike NoSQL.</li>
+</ul>
+<hr>
+<h2>Educación &amp; Certificaciones</h2>
+<ul>
+<li><strong>Técnico Medio en Informática / Sistemas</strong> | E.T.C.R Rómulo Gallegos (2012 – 2018)</li>
+</ul>
+    </article>
+    <article id="cv-paper-en" class="cv-paper" lang="en" aria-live="polite" hidden>
+<h1>Arturo Nava</h1>
+<p><strong>Senior Software Engineer | Distributed Systems, High-Concurrency &amp; Security</strong><br>Bogota, D.C., Colombia • <a href="mailto:arturonavax@gmail.com">arturonavax@gmail.com</a> • <a href="tel:+573242009803">+57 324 200 9803</a> • <a href="https://www.linkedin.com/in/arturonavax">linkedin.com/in/arturonavax</a> • <a href="https://github.com/arturonavax">github.com/arturonavax</a> • <a href="https://arturonavax.dev">arturonavax.dev</a></p>
 <hr>
 <h2>Summary / Executive Profile</h2>
 <p>Senior Software Engineer with 8+ years of experience designing and scaling mission-critical distributed architectures, high-throughput backend services, and enterprise security platforms across fintech, loyalty, and cryptographic verification domains. Specialized in engineering low-latency, concurrent microservices in <strong>Golang</strong> and <strong>Rust</strong>, architecting real-time dynamic fraud evaluation engines, implementing cryptographic authentication (TOTP/HMAC), and decoupling high-volume transactional OLTP databases from <strong>Snowflake</strong> OLAP analytics. Proven track record of driving system resilience, zero-downtime rollouts, automated access governance, and enterprise-grade DevSecOps standards.</p>
@@ -645,8 +709,8 @@ hr {
     id="cv-print-btn" 
     class="cv-print-fab no-print" 
     onclick="handlePrint()" 
-    title="Print or Save as PDF (Ctrl+P / Cmd+P)">
-    <svg viewBox="0 0 24 24">
+    title="Imprimir o Guardar como PDF (Ctrl+P / Cmd+P)">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
       <path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
       <path d="M6 14h12v8H6z"></path>
     </svg>
@@ -654,137 +718,37 @@ hr {
   </button>
 
   <script>
-    const CV_CONFIG = {
-      en: {
-        file: './ArturoNava-CV-en.html',
-        pageTitle: 'Arturo Nava - CV (English)',
-        langAttr: 'en',
-        printLabel: 'PDF'
-      },
-      es: {
-        file: './ArturoNava-CV-es.html',
-        pageTitle: 'Arturo Nava - CV (Español)',
-        langAttr: 'es',
-        printLabel: 'PDF'
-      }
-    };
+    let currentLang = 'es';
 
-    // Caché en memoria: pre-poblamos inglés desde el DOM pre-renderizado (0ms latency)
-    const cvCache = new Map();
-    const initialPaperHtml = document.getElementById('cv-paper').innerHTML;
-    const initialStyles = document.getElementById('cv-injected-styles').textContent;
+    function switchLanguage(lang) {
+      if (lang !== 'en' && lang !== 'es') return;
+      const isEn = (lang === 'en');
+      const paperEs = document.getElementById('cv-paper-es');
+      const paperEn = document.getElementById('cv-paper-en');
+      const btnEs = document.getElementById('btn-lang-es');
+      const btnEn = document.getElementById('btn-lang-en');
 
-    cvCache.set('en', {
-      css: initialStyles,
-      bodyContent: initialPaperHtml,
-      title: CV_CONFIG.en.pageTitle,
-      langAttr: CV_CONFIG.en.langAttr,
-      printLabel: CV_CONFIG.en.printLabel
-    });
-
-    let currentLang = 'en';
-
-    function detectInitialLanguage() {
-      // 1. Prioridad máxima: URL hash o parámetro explícito (#es, #en, ?lang=es, ?lang=en)
-      const hash = window.location.hash.toLowerCase().replace('#', '');
-      if (hash === 'en' || hash === 'es') return hash;
-
-      const params = new URLSearchParams(window.location.search);
-      const queryLang = params.get('lang')?.toLowerCase();
-      if (queryLang === 'en' || queryLang === 'es') return queryLang;
-
-      // 2. Detección del idioma del navegador (navigator.languages / navigator.language)
-      const browserLangs = navigator.languages || [navigator.language || ''];
-      for (const l of browserLangs) {
-        const clean = (l || '').toLowerCase();
-        if (clean.startsWith('es')) return 'es';
-        if (clean.startsWith('en')) return 'en';
+      if (paperEs && paperEn) {
+        paperEs.hidden = isEn;
+        paperEn.hidden = !isEn;
       }
 
-      // 3. Por defecto English para cualquier otro idioma internacional
-      return 'en';
-    }
-
-    async function fetchCVData(lang) {
-      if (cvCache.has(lang)) {
-        return cvCache.get(lang);
+      if (btnEs && btnEn) {
+        btnEs.classList.toggle('active', !isEn);
+        btnEs.setAttribute('aria-selected', isEn ? 'false' : 'true');
+        btnEn.classList.toggle('active', isEn);
+        btnEn.setAttribute('aria-selected', isEn ? 'true' : 'false');
       }
 
-      const config = CV_CONFIG[lang];
-      const response = await fetch(config.file);
-      if (!response.ok) {
-        throw new Error('HTTP error ' + response.status + ' cargando ' + config.file);
-      }
-
-      const rawHtml = await response.text();
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(rawHtml, 'text/html');
-
-      let css = '';
-      const styleEl = doc.querySelector('style');
-      if (styleEl) {
-        css = styleEl.textContent.replace(/(^|[^a-zA-Z0-9_-])body(\s*\{)/g, '$1#cv-paper$2');
-      }
-
-      const data = {
-        css: css,
-        bodyContent: doc.body ? doc.body.innerHTML : '',
-        title: config.pageTitle,
-        langAttr: config.langAttr,
-        printLabel: config.printLabel
-      };
-
-      cvCache.set(lang, data);
-      return data;
-    }
-
-    async function switchLanguage(lang) {
-      if (!CV_CONFIG[lang] || currentLang === lang) return;
-
-      const paper = document.getElementById('cv-paper');
-      paper.classList.add('loading');
+      document.documentElement.lang = lang;
+      currentLang = lang;
 
       try {
-        const data = await fetchCVData(lang);
-
-        document.getElementById('cv-injected-styles').textContent = data.css;
-        paper.innerHTML = data.bodyContent;
-
-        document.title = data.title;
-        document.documentElement.lang = data.langAttr;
-        document.getElementById('cv-print-label').textContent = data.printLabel;
-
-        document.getElementById('btn-lang-en').classList.toggle('active', lang === 'en');
-        document.getElementById('btn-lang-en').setAttribute('aria-selected', lang === 'en');
-        document.getElementById('btn-lang-es').classList.toggle('active', lang === 'es');
-        document.getElementById('btn-lang-es').setAttribute('aria-selected', lang === 'es');
-
-        currentLang = lang;
         localStorage.setItem('cv_lang', lang);
-        if (window.location.hash !== '#' + lang) {
-          history.replaceState(null, '', '#' + lang);
-        }
+      } catch (e) {}
 
-        const otherLang = lang === 'en' ? 'es' : 'en';
-        if (!cvCache.has(otherLang)) {
-          if ('requestIdleCallback' in window) {
-            requestIdleCallback(() => fetchCVData(otherLang).catch(() => {}));
-          } else {
-            setTimeout(() => fetchCVData(otherLang).catch(() => {}), 250);
-          }
-        }
-      } catch (err) {
-        console.error('Error cargando CV:', err);
-        paper.innerHTML = `
-          <div class="cv-error-box">
-            <h3>Error al cargar el CV</h3>
-            <p>No se pudo cargar dinámicamente el archivo <code>${CV_CONFIG[lang].file}</code>.</p>
-            <p>Puedes acceder directamente a la versión estática:</p>
-            <a href="${CV_CONFIG[lang].file}">Abrir ${CV_CONFIG[lang].file}</a>
-          </div>
-        `;
-      } finally {
-        paper.classList.remove('loading');
+      if (window.location.hash !== '#' + lang) {
+        history.replaceState(null, '', '#' + lang);
       }
     }
 
@@ -792,26 +756,56 @@ hr {
       window.print();
     }
 
+    function initLanguage() {
+      // 1. Prioridad: URL Hash (#en o #es)
+      const hash = (window.location.hash || '').toLowerCase().replace('#', '');
+      if (hash === 'en' || hash === 'es') {
+        switchLanguage(hash);
+        return;
+      }
+
+      // 2. Parámetro query (?lang=en o ?lang=es)
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const queryLang = params.get('lang')?.toLowerCase();
+        if (queryLang === 'en' || queryLang === 'es') {
+          switchLanguage(queryLang);
+          return;
+        }
+      } catch (e) {}
+
+      // 3. Preferencia previa en localStorage
+      try {
+        const saved = localStorage.getItem('cv_lang')?.toLowerCase();
+        if (saved === 'en' || saved === 'es') {
+          switchLanguage(saved);
+          return;
+        }
+      } catch (e) {}
+
+      // 4. Idioma preferido del navegador
+      const browserLangs = navigator.languages || [navigator.language || ''];
+      for (const l of browserLangs) {
+        const clean = (l || '').toLowerCase();
+        if (clean.startsWith('en')) {
+          switchLanguage('en');
+          return;
+        }
+        if (clean.startsWith('es')) {
+          switchLanguage('es');
+          return;
+        }
+      }
+    }
+
     window.addEventListener('hashchange', () => {
-      const hashLang = window.location.hash.toLowerCase().replace('#', '');
-      if (hashLang === 'en' || hashLang === 'es') {
-        switchLanguage(hashLang);
+      const hash = (window.location.hash || '').toLowerCase().replace('#', '');
+      if (hash === 'en' || hash === 'es') {
+        switchLanguage(hash);
       }
     });
 
-    document.addEventListener('DOMContentLoaded', () => {
-      // Pre-cargar español en background para que el primer clic sea inmediato
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(() => fetchCVData('es').catch(() => {}));
-      } else {
-        setTimeout(() => fetchCVData('es').catch(() => {}), 300);
-      }
-
-      const initialLang = detectInitialLanguage();
-      if (initialLang !== 'en') {
-        switchLanguage(initialLang);
-      }
-    });
+    initLanguage();
   </script>
 </body>
 </html>
